@@ -89,7 +89,7 @@
                                 , <&macro_press &kp LSHIFT>
                                 , <&macro_tap &kp F>
                                 , <&macro_release &kp LSHIFT>
-                                , <&macro_release &kp LGUI>
+                                , <&macro_release &kp LALT>
                                 ;
                 };
                 mc_w_half_l: w_half_l {
