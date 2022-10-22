@@ -167,6 +167,20 @@
         };
 };
 
+/ {
+        behaviors {
+                hm: homerow_mods {
+                        compatible = "zmk,behavior-hold-tap";
+                        label = "HOMEROW_MODS";
+                        #binding-cells = <2>;
+                        tapping-term-ms = <150>;
+                        quick-tap-ms = <0>;
+                        flavor = "tap-preferred";
+                        bindings = <&kp>, <&kp>;
+                };
+        };
+};
+
 
 / {
         keymap {
@@ -174,18 +188,18 @@
 
                 default_layer {
                         bindings = <
-&none   &mt LGUI RBKT     &kp Q   &kp W   &kp E         &kp R             &kp T        /*|*/     &kp Y         &kp U            &kp I         &kp O     &kp P      &mt RGUI LBKT  &none
-        &mt LCTRL GRAVE   &kp A   &kp S   &kp D         &kp F             &kp G        /*|*/     &kp H         &kp J            &kp K         &kp L     &kp SEMI   &mt RCTRL SQT
-        &mt LALT MINUS    &kp Z   &kp X   &kp C         &kp V             &kp B        /*|*/     &kp N         &kp M            &kp COMMA     &kp DOT   &kp FSLH   &mt RALT BSLH
-                                          &lt RSE TAB   &mt LSHFT SPACE   &lt LWR RET  /*|*/     &lt LWR ESC   &mt RSHFT BSPC   &lt RSE DEL
+&none   &mt LGUI RBKT     &kp Q           &kp W        &kp E         &kp R             &kp T        /*|*/     &kp Y         &kp U            &kp I         &kp O      &kp P          &mt RGUI LBKT  &none
+        &mt LCTRL GRAVE   &hm LCTRL A     &hm LALT S   &hm LGUI D    &hm LSHIFT F      &kp G        /*|*/     &kp H         &hm RSHIFT J     &hm RGUI K    &hm RALT L &hm RCTRL SEMI &mt RCTRL SQT
+        &mt LALT MINUS    &kp Z           &kp X        &kp C         &kp V             &kp B        /*|*/     &kp N         &kp M            &kp COMMA     &kp DOT    &kp FSLH       &mt RALT BSLH
+                                                       &lt RSE TAB   &mt LSHFT SPACE   &lt LWR RET  /*|*/     &lt LWR ESC   &mt RSHFT BSPC   &lt RSE DEL
                         >;
                 };
                 lower_layer {
                         bindings = <
-&none   &none           &none      &none    &none         &kp GRAVE  &kp EQUAL         /*|*/         &kp MINUS   &kp FSLH   &kp LBKT      &kp RBKT   &kp BSLH   &mc_vs_command    &none
-        &mt LCTRL PLUS  &kp EXCL   &kp AT   &kp HASH      &kp DLLR   &kp PRCNT         /*|*/         &kp CARET   &kp AMPS   &kp STAR      &kp LPAR   &kp RPAR   &mc_vs_format
-        &mt LALT EQUAL  &kp N1     &kp N2   &kp N3        &kp N4     &kp N5            /*|*/         &kp N6      &kp N7     &kp N8        &kp N9     &kp N0     &kp RALT
-                                            &lt ADJ TAB   &trans     &trans            /*|*/         &trans      &trans     &lt ADJ DEL
+&none   &none           &none            &none        &none         &kp GRAVE       &kp EQUAL       /*|*/         &kp MINUS   &kp FSLH         &kp LBKT      &kp RBKT      &kp BSLH       &mc_vs_command    &none
+        &mt LCTRL PLUS  &hm LCTRL EXCL   &hm LALT AT  &hm LGUI HASH &hm LSHIFT DLLR &kp PRCNT       /*|*/         &kp CARET   &hm RSHIFT AMPS  &hm RGUI STAR &hm RALT LPAR &hm RCTRL RPAR &mc_vs_format
+        &mt LALT EQUAL  &kp N1           &kp N2       &kp N3        &kp N4          &kp N5          /*|*/         &kp N6      &kp N7           &kp N8        &kp N9        &kp N0         &kp RALT
+                                                      &lt ADJ TAB   &trans          &trans          /*|*/         &trans      &trans           &lt ADJ DEL
                         >;
                 };
 
@@ -193,7 +207,7 @@
                         bindings = <
 &none   &mt LGUI COMMA    &none       &none        &none            &none         &none         /*|*/   &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT       &none
         &mt LCTRL EQUAL   &mc_w_gaps  &mc_w_full   &mc_spot_light   &mc_w_half_l  &mc_w_half_r  /*|*/   &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT       &none              &mt RCTRL  K_APP
-        &kp LALT          &mc_redo    &mc_undo     &mc_copy         &mc_paste     &none         /*|*/   &none          &kp C_BRI_INC    &kp C_BRI_DEC  &mc_scr_part    &mc_scr_part       &kp RALT
+        &kp LALT          &mc_redo    &mc_undo     &mc_copy         &mc_paste     &none         /*|*/   &none          &kp C_BRI_DEC   &kp C_BRI_INC  &mc_scr_part    &mc_scr_part       &kp RALT
                                                    &trans           &trans        &lt ADJ RET   /*|*/   &lt ADJ ESC    &trans     &trans
                         >;
                 };
