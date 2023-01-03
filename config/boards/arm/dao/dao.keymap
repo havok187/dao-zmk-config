@@ -189,7 +189,7 @@
                 default_layer {
                         bindings = <
 &none   &mt LGUI RBKT     &kp Q           &kp W        &kp E         &kp R             &kp T        /*|*/     &kp Y         &kp U            &kp I         &kp O      &kp P          &mt RGUI LBKT  &none
-        &mt LCTRL GRAVE   &hm LCTRL A     &hm LALT S   &hm LGUI D    &hm LSHIFT F      &kp G        /*|*/     &kp H         &hm RSHIFT J     &hm RGUI K    &hm RALT L &hm RCTRL SEMI &mt RCTRL SQT
+        &mt LCTRL GRAVE   &hm LCTRL A     &hm LALT S   &hm LGUI D    &hm LSHIFT F      &hm SPACE G  /*|*/     &kp H         &hm RSHIFT J     &hm RGUI K    &hm RALT L &hm RCTRL SEMI &mt RCTRL SQT
         &mt LALT MINUS    &kp Z           &kp X        &kp C         &kp V             &kp B        /*|*/     &kp N         &kp M            &kp COMMA     &kp DOT    &kp FSLH       &mt RALT BSLH
                                                        &lt RSE TAB   &mt LSHFT SPACE   &lt LWR RET  /*|*/     &lt LWR ESC   &mt RSHFT BSPC   &lt RSE DEL
                         >;
@@ -207,7 +207,7 @@
                         bindings = <
 &none   &mt LGUI COMMA    &none       &none        &none            &none         &none         /*|*/   &kp C_MUTE     &kp C_VOL_DN     &kp C_VOL_UP   &kp C_PREVIOUS  &kp C_PLAY_PAUSE   &kp C_NEXT       &none
         &mt LCTRL EQUAL   &mc_w_gaps  &mc_w_full   &mc_spot_light   &mc_w_half_l  &mc_w_half_r  /*|*/   &kp LEFT       &kp DOWN         &kp UP         &kp RIGHT       &none              &mt RCTRL  K_APP
-        &kp LALT          &mc_redo    &mc_undo     &mc_copy         &mc_paste     &none         /*|*/   &none          &kp C_BRI_DEC   &kp C_BRI_INC  &mc_scr_part    &mc_scr_part       &kp RALT
+        &kp LALT          &mc_redo    &mc_undo     &mc_copy         &mc_paste     &none         /*|*/   &none          &kp C_BRI_DEC   &kp C_BRI_INC  &mc_scr_part    &mc_scr_menu       &kp RALT
                                                    &trans           &trans        &lt ADJ RET   /*|*/   &lt ADJ ESC    &trans     &trans
                         >;
                 };
